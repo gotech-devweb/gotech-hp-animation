@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: HiraginoKakuGothicPro;
+    font-weight: bold;
+    src: url("./font/HiraginoKakuGothicProW6.otf") format("opentype");
+}
+
+html {
+    font-family: 'HiraginoKakuGothicPro';
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background: white;
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 5rem;
+    padding-right: 2rem;
+    z-index: 99;
+    display: none;
+}
+
+.header .header-nav .header-item {
+    margin: 0 1rem;
+}
+
+.header .header-nav-left .header-item img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.header .header-nav-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-item-effect {
+    position: relative;
+    top: -35px;
+
+}
+
+.header-item-effect .header-item {
+    color: white;
+    padding: 3rem 1.5rem;
+    background-color: #007FCC;
+    border-radius: 25%;
+}
+
+.bg-section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007FCC;
+}
+
+.bg-section>h1 {
+    font-size: 40px;
+    color: white;
+    background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+    -webkit-background-size: 300px;
+    color: rgba(255, 255, 255, 0.3);
+    -webkit-background-clip: text;
+    -webkit-animation-name: text-effect;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: 2;
+    text-shadow: 0 0px 0px rgba(255, 255, 255, 0.5);
+}
+
+.bg-section-disable {
+    -webkit-animation-name: moveAndScale;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes text-effect {
+
+    0%,
+    10% {
+        background-position: -1000px;
+    }
+
+    20% {
+        background-position: top left;
+    }
+
+    90% {
+        background-position: top right;
+    }
+
+    100% {
+        background-position: 1000px;
+    }
+}
+
+@keyframes moveAndScale {
+    0% {
+        transform: scale(1);
+        border-radius: 0;
+    }
+
+    90% {
+        transform: translate(43%, -43%) scale(0.0125, 0.025);
+        border-radius: 25%;
+    }
+
+    100% {
+        transform: translate(43%, -43%) scale(0.05, 0.1);
+    }
+}
+
+/* main animation */
+#main {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+}
+
+#main .main-circle {
+    width: 182px;
+    height: 182px;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+}
+
+#main .main-circle:nth-child(1) {
+    background-color: #007FCC;
+    top: calc((100% - 182px)/2);
+    left: calc((100% - 182px)/2);
+    -webkit-animation-delay: 2s;
+}
+
+#main .main-circle:nth-child(2) {
+    background-color: #007FCC;
+    top: calc((100% - 182px)/1);
+    left: calc((100% - 182px)/2);
+    -webkit-animation-delay: 4s;
+}
+
+#main .main-circle:nth-child(3) {
+    background-color: #F2B90D;
+    top: calc((100% - 182px)/2);
+    left: calc((100% - 182px)/1.45);
+    -webkit-animation-delay: 6s;
+
+}
+
+#main .main-circle:nth-child(4) {
+    background-color: #F2B90D;
+    top: calc((100% - 182px)/1);
+    left: calc((100% - 182px)/1.45);
+    -webkit-animation-delay: 8s;
+}
+
+#main .main-circle-out {
+    -webkit-animation-delay: 0s !important;
+    -webkit-animation-name: bubble-effect-out;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+.main-circle-active {
+    -webkit-animation-name: bubble-effect;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+.main-circle-active-2 {
+    -webkit-animation-name: bubble-effect-2;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes bubble-effect {
+    0% {
+        transform: scale(0.1);
+        opacity: 1;
+    }
+
+    50% {
+        background-color: #F2B90D;
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        background-color: #F2B90D;
+        transform: scale(0.2);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes bubble-effect-2 {
+    0% {
+        transform: scale(0.1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.2);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes bubble-effect-out {
+    from {
+        transform: translate(0%, 0%) scale(0.2);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(300%, -1000%) scale(0.2);
+        opacity: 1;
+    }
+}
+
+/* Image effect */
+#image-effect {
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    top: 5rem;
+    opacity: 0;
+}
+
+.image-effect-active {
+    -webkit-animation-name: fade-in-effect;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes fade-in-effect {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
