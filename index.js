@@ -49,19 +49,6 @@ function countDownMain(seconds) {
     }, 1000);
 }
 
-function countDownMainCircleOut(seconds) {
-    var intervalId = setInterval(function () {
-        seconds--;
-        if (seconds === 0) {
-            clearInterval(intervalId);
-            console.log("Hết giờ!");
-            document.getElementById('main-circle-out').classList.add('main-circle-out')
-        } else {
-            console.log(seconds + " giây còn lại");
-        }
-    }, 1000);
-}
-
 function countDownImageEffect(seconds) {
     var intervalId = setInterval(function () {
         seconds--;
@@ -156,7 +143,6 @@ function getRandomClass() {
 countDownBg(5)
 countDownHeader(6)
 countDownMain(6)
-// countDownMainCircleOut(16)
 countDownImageEffect(18)
 countDownLogoEffect(26)
 countDownBallEffect(31)
