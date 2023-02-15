@@ -70,6 +70,7 @@ function countDownLogoEffect(seconds) {
             console.log("Hết giờ!");
             let main = document.getElementById('circle-effect')
             main.classList.add("main-logo-active")
+            document.getElementById('image-effect').classList.add('image-effect-out')
         } else {
             console.log(seconds + " giây còn lại");
         }
@@ -122,11 +123,97 @@ function countDownArrowEffect(seconds) {
             console.log(seconds + " giây còn lại");
         }
     }, 1000);
-    setTimeout(()=>{
+    setTimeout(() => {
         let main = document.getElementById('arrow-effect')
         main.innerHTML = ""
     }, 3000)
 }
+
+function countDownDiagonal(seconds) {
+    var intervalId = setInterval(function () {
+        seconds--;
+        if (seconds === 0) {
+            clearInterval(intervalId);
+            console.log("Hết giờ!");
+            let main = document.getElementById('diagonal-effect')
+            for (let i = 0; i < main.children.length; i++) {
+                main.children[i].classList.add("diagonal-active");
+            }
+        } else {
+            console.log(seconds + " giây còn lại");
+        }
+    }, 1000);
+}
+
+function countDownShowText(seconds) {
+    var intervalId = setInterval(function () {
+        seconds--;
+        if (seconds === 0) {
+            clearInterval(intervalId);
+            console.log("Hết giờ!");
+            // document.getElementById('text-effect').classList.add("text-effect-show")
+            document.getElementById('main').innerHTML = '<section id="text-effect" class="container"><div class="circles"><div class="circle-wrapper"><div class="circle"></div><div class="text">Business</div></div><div class="circle-wrapper"><div class="circle"></div><div class="text"><span>×</span> Technology  <span>×</span></div></div><div class="circle-wrapper"><div class="circle"></div><div class="text">Design</div></div></div></section>';
+        } else {
+            console.log(seconds + " giây còn lại");
+        }
+    }, 1000);
+}
+
+function countDownCirleEffect(seconds) {
+    var intervalId = setInterval(function () {
+        seconds--;
+        if (seconds === 0) {
+            clearInterval(intervalId);
+            console.log("Hết giờ!");
+            let main = document.querySelectorAll('.circle')
+            console.log(main.length);
+            for (let i = 0; i < main.length; i++) {
+                main[i].classList.add('circle-active')
+            }            
+        } else {
+            console.log(seconds + " giây còn lại");
+        }
+    }, 1000);
+}
+
+function countDownHideCirlce(seconds) {
+    var intervalId = setInterval(function () {
+        seconds--;
+        if (seconds === 0) {
+            clearInterval(intervalId);
+            console.log("Hết giờ!");
+            let main = document.querySelectorAll('.circle')
+            console.log(main.length);
+            for (let i = 0; i < main.length; i++) {
+                if(i == 1) {
+                    main[1].classList.add('scaleX');
+                } else {
+                    main[i].classList.add('image-effect-out')
+                }                
+            }            
+        } else {
+            console.log(seconds + " giây còn lại");
+        }
+    }, 1000);
+}
+
+function countDownCirleEffect(seconds) {
+    var intervalId = setInterval(function () {
+        seconds--;
+        if (seconds === 0) {
+            clearInterval(intervalId);
+            console.log("Hết giờ!");
+            let main = document.querySelectorAll('.text')
+            console.log(main.length);
+            for (let i = 0; i < main.length; i++) {
+                main[i].classList.add('text-active')
+            }
+        } else {
+            console.log(seconds + " giây còn lại");
+        }
+    }, 1000);
+}
+
 
 function getRandomImageSrc() {
     let imageSources = ["./images/arrow-orange.png", "./images/arrow-blue.png", "./images/arrow-pastel.png", "./images/arrow-pink.png"]
@@ -143,8 +230,12 @@ function getRandomClass() {
 countDownBg(5)
 countDownHeader(6)
 countDownMain(6)
-countDownImageEffect(18)
-countDownLogoEffect(26)
-countDownBallEffect(31)
-countDownBgFrame2(34)
-countDownArrowEffect(36)
+countDownImageEffect(12)
+countDownLogoEffect(13)
+countDownDiagonal(15)
+countDownBallEffect(15)
+countDownBgFrame2(17)
+countDownArrowEffect(18)
+countDownShowText(21)
+countDownHideCirlce(22)
+countDownCirleEffect(24)
