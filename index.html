@@ -6,9 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GotechJSC</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="responsive-index.css">
+    <!-- Thư viện CSS của Owl Carousel -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
 
 <body>
@@ -35,21 +39,388 @@
         </div>
     </header>
     <main class="main">
-        <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
-            <source src="./video/gotech_pc_v2.mp4" type="video/mp4">
-        </video>
         <div class="main__animation">
+            <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+                <source src="./video/gotech_pc_v2.mp4" type="video/mp4">
+            </video>
             <div class="main__animation-heading">
                 <h1>Gotech</h1>
+            </div>
+            <div class="main__animation-sroll-down">
+                <a href="javascript:void(0)">Scroll down</a>
+                <div class="scroll-down-area">
+                    <svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns1="http://sozi.baierouge.fr"
+                        xmlns:cc="http://web.resource.org/cc/" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" id="Layer_1"
+                        enable-background="new 0 0 50 150" xml:space="preserve" viewBox="0 0 50 150" version="1.1"
+                        y="0px" x="0px">
+                        <g>
+                            <line y2="125.95" x1="23.871" x2="23.871" stroke="#007FCC" stroke-miterlimit="10" y1="1.917"
+                                stroke-width="6" />
+                            <polygon points="42.292 125.05 3.969 125.05 24.885 149" fill="#007FCC" />
+                        </g>
+                    </svg>
+                </div>
             </div>
             <div class="main__animation-heading main__animation-heading-right">
                 <h1>
                     テクノロジーで <br>
                     未来をつくる
                 </h1>
+
+                <div class="button-contact">
+                    <a href="javascript:void(0)">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="main__service">
+            <div class="main__service-content">
+                <div class="main__service-content-image">
+                    <img src="./svg/service.svg" alt="Service">
+                </div>
+                <div class="main__service-content-description">
+                    <div>
+                        <h1>
+                            <span>
+                                <img src="./images/Hammer.png" alt="">
+                            </span> 開発
+                        </h1>
+                        <p>iOS/Androidのモバイルアプリケーション、SaaSなどのWebアプリケーションを中心にソフトウェアプロダクト開発を支援します。</p>
+                    </div>
+                    <div>
+                        <h1>
+                            <span>
+                                <img src="./images/Pencil Drawing.png" alt="">
+                            </span> デザイン
+                        </h1>
+                        <p>デザインを文化として持ち、その力を組織全体で活かせる環境構築を支援します。デザイン組織の立ち上げ、仕組み作り、採用施策など、クライアントの規模やニーズに併せて柔軟に対応します。</p>
+                    </div>
+                    <div>
+                        <h1>
+                            <span>
+                                <img src="./images/Business.png" alt="">
+                            </span> 開発
+                        </h1>
+                        <p>戦略思考でビジョンを描き、ブランドのコアを内側からデザインします。企業や事業の成り立ち、原体験を紐解き、事業・業界・社会的文脈などを一貫したブランドの思想として言語化します。</p>
+                    </div>
+                    <div class="main__service-button">
+                        <a href="javascript:void(0)">詳しく見る</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main__product">
+            <div class="main__product-section">
+                <div class="main__product-section-left">
+                    <div class="main__product-card">
+                        <img src="./images/product-image.png" alt="Product Image">
+                        <p class="main__product-card-title">ペットの体調管理アプリ</p>
+                        <h1 class="main__product-card-company">
+                            株式会社〇〇
+                        </h1>
+                        <div class="main__product-card-tech">
+                            <span class="tag">
+                                Mobile App
+                            </span>
+                            <span class="tag">
+                                Web App
+                            </span>
+                            <span class="tag">
+                                Laravel
+                            </span>
+                            <span class="tag">
+                                Vue JS
+                            </span>
+                        </div>
+                    </div>
+                    <div class="main__product-card">
+                        <img src="./images/product-image.png" alt="Product Image">
+                        <p class="main__product-card-title">ペットの体調管理アプリ</p>
+                        <h1 class="main__product-card-company">
+                            株式会社〇〇
+                        </h1>
+                        <div class="main__product-card-tech">
+                            <span class="tag">
+                                Mobile App
+                            </span>
+                            <span class="tag">
+                                Web App
+                            </span>
+                            <span class="tag">
+                                Laravel
+                            </span>
+                            <span class="tag">
+                                Vue JS
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__product-section-right">
+                    <div class="main__product-card">
+                        <img src="./images/product-image.png" alt="Product Image">
+                        <p class="main__product-card-title">ペットの体調管理アプリ</p>
+                        <h1 class="main__product-card-company">
+                            株式会社〇〇
+                        </h1>
+                        <div class="main__product-card-tech">
+                            <span class="tag">
+                                Mobile App
+                            </span>
+                            <span class="tag">
+                                Web App
+                            </span>
+                            <span class="tag">
+                                Laravel
+                            </span>
+                            <span class="tag">
+                                Vue JS
+                            </span>
+                        </div>
+                    </div>
+                    <div class="main__product-card">
+                        <img src="./images/product-image.png" alt="Product Image">
+                        <p class="main__product-card-title">ペットの体調管理アプリ</p>
+                        <h1 class="main__product-card-company">
+                            株式会社〇〇
+                        </h1>
+                        <div class="main__product-card-tech">
+                            <span class="tag">
+                                Mobile App
+                            </span>
+                            <span class="tag">
+                                Web App
+                            </span>
+                            <span class="tag">
+                                Laravel
+                            </span>
+                            <span class="tag">
+                                Vue JS
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main__product-button">
+                <a href="javascript:void(0)">もっと見る</a>
+            </div>
+        </div>
+        <div class="main__blog">
+            <div class="main__blog-section">
+                <div class="main__blog-heading">
+                    <h1>Blog</h1>
+                    <a href="javascript:void(0)">記事をもっと見る
+                        <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.179688 21.18L9.33969 12L0.179688 2.82L2.99969 0L14.9997 12L2.99969 24L0.179688 21.18Z"
+                                fill="#007FCC" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="main__blog-group">
+                    <div class="main__blog-card">
+                        <img src="./images/blog-1.png" alt="Blog Image">
+                        <div class="main__blog-card-info">
+                            <a href="javascript:void(0)" class="main__blog-card-button">Introduce</a>
+                            <p class="main__blog-card-description">
+                                弊社がUIデザインで参画したモバイルアプリ、〇〇が本日リリースされました。弊社がUIデザインで参画したモバイルアプリ、〇〇が本日リリースされ...
+                            </p>
+                            <span class="main__blog-card-date">2023.04.30</span>
+                        </div>
+                    </div>
+                    <div class="main__blog-card">
+                        <img src="./images/blog-2.png" alt="Blog Image">
+                        <div class="main__blog-card-info">
+                            <a href="javascript:void(0)" class="main__blog-card-button">Life huck</a>
+                            <p class="main__blog-card-description">
+                                弊社がUIデザインで参画したモバイルアプリ、〇〇が本日リリースされました。サンプルテキストが入ります。
+                            </p>
+                            <span class="main__blog-card-date">2023.04.30</span>
+                        </div>
+                    </div>
+                    <div class="main__blog-card">
+                        <img src="./images/blog-3.png" alt="Blog Image">
+                        <div class="main__blog-card-info">
+                            <a href="javascript:void(0)" class="main__blog-card-button">Gotech</a>
+                            <p class="main__blog-card-description">
+                                弊社がUIデザインで参画したモバイルアプリ、〇〇が本日リリースされました
+                            </p>
+                            <span class="main__blog-card-date">2023.04.30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main__document-section main__blog-section">
+                <div class="main__blog-heading">
+                    <h1>Document</h1>
+                    <a href="javascript:void(0)">記事をもっと見る
+                        <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.179688 21.18L9.33969 12L0.179688 2.82L2.99969 0L14.9997 12L2.99969 24L0.179688 21.18Z"
+                                fill="#007FCC" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="main__blog-group">
+                    <div class="main__blog-card">
+                        <img src="./images/blog-1.png" alt="Blog Image">
+                        <div class="main__blog-card-info">
+                            <a href="javascript:void(0)" class="main__blog-card-button">Introduce</a>
+                            <p class="main__blog-card-description">
+                                弊社がUIデザインで参画したモバイルアプリ、〇〇が本日リリースされました。弊社がUIデザインで参画したモバイルアプリ、〇〇が本日リリースされ...
+                            </p>
+                            <span class="main__blog-card-date">2023.04.30</span>
+                        </div>
+                    </div>
+                    <div class="main__blog-card">
+                        <img src="./images/blog-2.png" alt="Blog Image">
+                        <div class="main__blog-card-info">
+                            <a href="javascript:void(0)" class="main__blog-card-button">Life huck</a>
+                            <p class="main__blog-card-description">
+                                弊社がUIデザインで参画したモバイルアプリ、〇〇が本日リリースされました。サンプルテキストが入ります。
+                            </p>
+                            <span class="main__blog-card-date">2023.04.30</span>
+                        </div>
+                    </div>
+                    <div class="main__blog-card">
+                        <img src="./images/blog-3.png" alt="Blog Image">
+                        <div class="main__blog-card-info">
+                            <a href="javascript:void(0)" class="main__blog-card-button">Gotech</a>
+                            <p class="main__blog-card-description">
+                                弊社がUIデザインで参画したモバイルアプリ、〇〇が本日リリースされました
+                            </p>
+                            <span class="main__blog-card-date">2023.04.30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main__about">
+            <div class="main__about-section">
+                <div class="main__about-slide owl-carousel" id="slide">
+                    <div class="campus-card">
+                        <img src="./images/campus-image-1.png" alt="Viet Nam">
+                        <div class="campus-card-info">
+                            <h1>Viet Nam</h1>
+                            <p>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_505_164)">
+                                        <path
+                                            d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
+                                            fill="#007FCC" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_505_164">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                Oranienstraße 6 Hinterhof, 10997 Berlin Germany
+                            </p>
+                        </div>
+                    </div>
+                    <div class="campus-card">
+                        <img src="./images/campus-image-2.png" alt="Viet Nam">
+                        <div class="campus-card-info">
+                            <h1>Osaka</h1>
+                            <p>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_505_164)">
+                                        <path
+                                            d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
+                                            fill="#007FCC" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_505_164">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                大阪府大阪市西区江戸堀2丁目1－1江戸堀センタービルB1F
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__about-information">
+                    <div class="information-card">
+                        <h1>Contact</h1>
+                        <p>お問い合わせはこちら</p>
+                        <img src="./images/Mail_outline.png" alt="">
+                    </div>
+                    <div class="information-card">
+                        <h1>Recruit</h1>
+                        <p>私たちと一緒にはたらきませんか？</p>
+                        <img src="./images/Person_add_alt.png" alt="">
+                    </div>
+                    <div class="information-card">
+                        <h1>Company</h1>
+                        <p>企業概要はこちらから</p>
+                        <img src="./images/Apartment.png" alt="">
+                    </div>
+                    <div class="information-card">
+                        <h1>Download</h1>
+                        <p>資料請求はこちらから！</p>
+                        <img src="./images/description.png" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-container-section">
+                <div class="column logo">
+                    <a href="/"><img src="./images/logo.png" alt=""></a>
+                </div>
+                <div class="column social-media">
+                    <ul>
+                        <li><a href="javascript:void(0)"><img src="./images/Facebookロゴ.png" alt=""></a></li>
+                        <li><a href="javascript:void(0)"><img src="./images/Twitterロゴ.png" alt=""></a></li>
+                        <li><a href="javascript:void(0)"><img src="./images/Instagramロゴ.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-container-section">
+                <div class="column service">
+                    <a href="javascript:void(0)">Service</a>
+                    <ul>
+                        <li><a href="javascript:void(0)">開発</a></li>
+                        <li><a href="javascript:void(0)">デザイン</a></li>
+                        <li><a href="javascript:void(0)">ビジネス</a></li>
+                    </ul>
+                </div>
+                <div class="column work">
+                    <a href="javascript:void(0)">Work</a>
+                </div>
+                <div class="column blog">
+                    <a href="javascript:void(0)">Blog</a>
+                </div>
+                <div class="column news">
+                    <a href="javascript:void(0)">News</a>
+                </div>
+                <div class="column company">
+                    <a href="javascript:void(0)">Company</a>
+                    <ul>
+                        <li><a href="javascript:void(0)">お問い合わせ</a></li>
+                        <li><a href="javascript:void(0)">資料ダウンロード</a></li>
+                        <li><a href="javascript:void(0)">会社概要</a></li>
+                        <li><a href="javascript:void(0)">採用情報</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>©️ Gotech Inc. All rights reserved. Here`s our <a href="javascript:void(0)">Privacy Policy</a></p>
+        </div>
+    </footer>
+    <button id="scrollToTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="jquery-3.4.1.min.js"></script>
+    <!-- Thư viện JS của Owl Carousel -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="index.js"></script>
 </body>
 
