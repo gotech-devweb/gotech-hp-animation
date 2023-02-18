@@ -5,82 +5,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>GotechJSC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <header id="header" class="header">
-        <div class="header-nav header-nav-left">
-            <a href="javascript:void(0)" class="header-item"><img src="./images/logo.png" alt=""></a>
-        </div>
-
-        <div class="header-nav header-nav-right">
-            <div>
-                <a href="javascript:void(0)" class="header-item">Home</a>
-                <a href="javascript:void(0)" class="header-item">Service</a>
-                <a href="javascript:void(0)" class="header-item">Work</a>
-                <a href="javascript:void(0)" class="header-item">News</a>
-                <a href="javascript:void(0)" class="header-item">Blog</a>
-                <a href="javascript:void(0)" class="header-item">Company</a>
-            </div>
-            <div class="header-item-effect">
-                <a href="javascript:void(0)" class="header-item">Contact</a>
+    <header class="header">
+        <nav>
+            <a href="/"><img src="./images/logo.png" alt="GotechJSC Logo"></a>
+        </nav>
+        <div class="header__nav">
+            <ul class="header__nav-menu">
+                <li><a href="javascript:void(0)">Home</a></li>
+                <li><a href="javascript:void(0)">Service</a></li>
+                <li><a href="javascript:void(0)">Work</a></li>
+                <li><a href="javascript:void(0)">News</a></li>
+                <li><a href="javascript:void(0)">Blog</a></li>
+                <li><a href="javascript:void(0)">Company</a></li>
+            </ul>
+            <div class="header__nav-language">
+                <select name="" id="">
+                    <option value="jp" selected>JP</option>
+                    <option value="vi">VI</option>
+                    <option value="en">EN</option>
+                </select>
             </div>
         </div>
     </header>
-    <section id="background-effect" class="bg-section">
-        <h1 id="background-effect-text">
-            Draw the world according to your imagination
-        </h1>
-    </section>
-    <section id="main">
-        <section id="circle-effect">
-            <div class="main-circle"></div>
-            <div class="main-circle"></div>
-            <div class="main-circle"></div>
-            <div class="main-circle"></div>
-
-            <div class="main-circle"></div>
-            <div class="main-circle"></div>
-            <div class="main-circle"></div>
-            <div class="main-circle"></div>
-            <div class="main-circle"></div>
-        </section>
-        <section>
-            <img id="image-effect" src="./images/circle-effetc.png" alt="">
-        </section>
-        <section id="main-frame-2">
-            <section id="diagonal-effect">
-                <div class="diagonal"></div>
-                <div class="diagonal"></div>
-                <div class="diagonal"></div>
-            </section>
-            <section id="ball-effect">
-
-            </section>
-            <section id="arrow-effect">
-            </section>
-        </section>
-        <!-- <section id="text-effect" class="container">
-            <div class="circles">
-                <div class="circle-wrapper">
-                    <div class="circle"></div>
-                    <div class="text">Business</div>
-                </div>
-                <div class="circle-wrapper">
-                    <div class="circle"></div>
-                    <div class="text"><span>×</span> Technology  <span>×</span></div>
-                </div>
-                <div class="circle-wrapper">
-                    <div class="circle"></div>
-                    <div class="text">Design</div>
-                </div>
+    <main class="main">
+        <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+            <source src="./video/gotech_pc_v2.mp4" type="video/mp4">
+        </video>
+        <div class="main__animation">
+            <div class="main__animation-heading">
+                <h1>Gotech</h1>
             </div>
-        </section> -->
-    </section>
-
-
+            <div class="main__animation-heading main__animation-heading-right">
+                <h1>
+                    テクノロジーで <br>
+                    未来をつくる
+                </h1>
+            </div>
+        </div>
+    </main>
     <script src="index.js"></script>
 </body>
 
