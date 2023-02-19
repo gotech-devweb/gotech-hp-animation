@@ -1,7 +1,7 @@
 $('.owl-carousel').owlCarousel({
     autoplay: true, // Tự động chuyển slide
-    dots: true, // Hiển thị chấm chỉ số slide
-    nav: true, // Hiển thị nút điều khiển trái/phải
+    dots: false, // Hiển thị chấm chỉ số slide
+    nav: false, // Hiển thị nút điều khiển trái/phải
     loop: true, // Cho phép lặp lại slide
     speed: 500, // Tốc độ chuyển đổi slide
     items: 1, // Số slide hiển thị trên màn hình
@@ -10,16 +10,16 @@ $('.owl-carousel').owlCarousel({
     responsive: {
         0: {
             items: 1,
-            nav: true
+            nav: false
         },
         600: {
             items: 1,
             nav: false
         },
-        1000: {
-            items: 2,
-            nav: true,
-            loop: false
+        768: {
+            items: 1,
+            nav: false,
+            loop: true
         }
     }
 });

@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GotechJSC</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="responsive-index.css">
@@ -17,7 +19,7 @@
 
 <body>
     <header class="header">
-        <nav>
+        <nav class="logo-responsive">
             <a href="/"><img src="./images/logo.png" alt="GotechJSC Logo"></a>
         </nav>
         <div class="header__nav">
@@ -37,6 +39,25 @@
                 </select>
             </div>
         </div>
+        <label class="header__bar-menu-mb">
+            <input type="checkbox">
+            <span class="menu"> <span class="hamburger"></span> </span>
+            <ul>
+                <li><a href="javascript:void(0)">Home</a></li>
+                <li><a href="javascript:void(0)">Service</a></li>
+                <li><a href="javascript:void(0)">Work</a></li>
+                <li><a href="javascript:void(0)">News</a></li>
+                <li><a href="javascript:void(0)">Blog</a></li>
+                <li><a href="javascript:void(0)">Company</a></li>
+                <li>
+                    <select name="" id="">
+                        <option value="jp" selected>JP</option>
+                        <option value="vi">VI</option>
+                        <option value="en">EN</option>
+                    </select>
+                </li>
+            </ul>
+        </label>
     </header>
     <main class="main">
         <div class="main__animation">
@@ -66,7 +87,7 @@
             </div>
             <div class="main__animation-heading main__animation-heading-right">
                 <h1>
-                    テクノロジーで <br>
+                    テクノロジーで<br/>
                     未来をつくる
                 </h1>
 
