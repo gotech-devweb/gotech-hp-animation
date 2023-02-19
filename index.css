@@ -316,8 +316,8 @@ body::-webkit-scrollbar {
     justify-content: center;
     padding: 8px 16px;
     gap: 10px;
-    width: 98px;
-    height: 28px;
+    width: fit-content;
+    height: auto;
     border: 1px solid #646D70;
     border-radius: 20px;
     margin: 8px;
@@ -721,7 +721,7 @@ footer .footer-container .footer-container-section:last-child {
     .header__bar-menu-mb ul {
         z-index: 200;
         position: absolute;
-        top: 50%;
+        top: 140%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
