@@ -101,6 +101,19 @@ body::-webkit-scrollbar {
     z-index: -1;
 }
 
+#background-video-mobile {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 5rem;
+    bottom: 0;
+    z-index: -1;
+    display: none;
+}
+
 .main__animation {
     width: 100vw;
     min-height: 100vh;
@@ -889,5 +902,13 @@ footer .footer-container .footer-container-section:last-child {
 
     .copyright p {
         font-size: 10px;
+    }
+
+    #background-video-mobile {
+        display: block;
+    }
+
+    #background-video {
+        display: none;
     }
 }
